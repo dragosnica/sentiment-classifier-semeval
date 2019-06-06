@@ -34,7 +34,7 @@ Additionally, ensure that the twokenize.py module (download from https://github.
 
 5. Modify the names of the testsets in tesetsets.py. At the moment the program requires both the .csv and the .txt versions of the files.
  
-6. From the model_building folder, open "build.sh" and uncomment one of the commands you'd like to run. Again, modify the file sources required. The available flags and features in "NN_build.py" are as follows:
+6a. From the model_building folder, open "build.sh" and uncomment one of the commands you'd like to run. Again, modify the required file sources. The available flags and features in "NN_build.py" are as follows:
 
 ```python3
 -model (-m): "DNN" for fully connected network; "CNN" for convolutional neural network; "LSTM" for long short term memory network; "CNN_LSTM_Ensemble" for stacking ensemble. The network architectures are defined in the .py files in model_building
@@ -47,19 +47,13 @@ Additionally, ensure that the twokenize.py module (download from https://github.
 -word_embeddings_file (-we): the path to the word embeddings file
 -train_we (-trwe or -no_trwe): Pass the flag -trwe if the word embeddings are to be trainable by the neural network. Pass the flag -no_trwe if the word embeddings should remain as they are during the training phase
 -max_len (-ml): the maximum length for the sentence (required just for the CNN and LSTM models)
--
+-perform_test (-pt or -no_pt): whether to perform accuracy and F1 score evaluation on the test data in "testsets.py". Make sure the datasets in the testsets file are correct if the "-pt" flag is passed.
 ```
 
-Open classification.py:
+6b. Run the "build.sh" script:
 
-  ```bash
-  gedit classification.py
+```bash
+  (cd model_building && ./build.sh)
   ```
-If you choose to train the classifier using neural networks, ensure that the numeric_target variable equals "True" (bool). Else, set it to "False" (bool).
-
-7. Train your classifier:
-  ```bash
-  python3 classification.py
-  ```
-  The best neural network models are saved in the "models" folder.
- 
+  
+When training a new model, the weights for the best neural networks are saved in the "models" folder.
