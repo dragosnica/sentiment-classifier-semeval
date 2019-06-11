@@ -67,7 +67,7 @@ Additionally, ensure that the twokenize.py module (download from https://github.
   
 When training a new model, the weights for the best neural networks are saved in the "models" folder.
 
-##License
+## License
 Copyright 2018 Dragoș-Alexandru Nica
 
 Licensed under the Apache License, Version 2.0 (the "License");
