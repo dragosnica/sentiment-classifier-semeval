@@ -8,7 +8,7 @@ The pipeline was originally built to accommodate the 2017 semeval tweets data. T
 
 Author: Dragoş A Nica (@DragosANica and nica.dragos_alexandru@yahoo.com)
 
-Coursework #2 for the Natural Language Processing (CS918) module for the MSc Computer Science at The University of Warwick.
+Coursework #2 for the Natural Language Processing (CS918) module for the PGDip Computer Science at The University of Warwick.
 
 ## How to use the pipeline
 
